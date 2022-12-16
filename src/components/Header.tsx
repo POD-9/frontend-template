@@ -18,7 +18,7 @@ const Header = () => {
   } = useProducts()
   return (
     <header>
-      <div className='bg-white flex w-full justify-between px-10 h-24 items-center'>
+      <div className='bg-white flex w-full justify-between md:px-10 px-5 h-24 items-center'>
         <Link to={'/'}>
           <img src={BrandLogo} alt='Dealerz' className='max-h-12' />
         </Link>
@@ -26,18 +26,18 @@ const Header = () => {
           <Link to={'/notdone'}>
             <div className='flex items-center justify-center cursor-pointer'>
               <img src={Phone} alt='phone' />
-              <span className='ml-1 font-bold'>Call Center</span>
+              <span className='ml-1 font-bold hidden sm:block'>Call Center</span>
             </div>
           </Link>
           <Link to={'/notdone'}>
             <div className='flex items-center justify-center ml-6 cursor-pointer'>
               <img src={Truck} alt='shipping and returns' />
-              <span className='ml-2 font-bold'>Shipping & Returns</span>
+              <span className='ml-2 font-bold hidden sm:block'>Shipping & Returns</span>
             </div>
           </Link>
         </div>
       </div>
-      <div className='flex w-full items-center px-10 h-24 justify-between focus:outline-none gap-5'>
+      <div className='flex sm:flex-row justify-center flex-col w-full items-center md:px-10 px-5 h-24 sm:justify-between focus:outline-none gap-5'>
         <ul className='flex gap-3'>
         <Link to={'/'}>
           <li className='cursor-pointer font-bold'>Shop</li>
@@ -53,7 +53,7 @@ const Header = () => {
           </Link>
         </ul>
 
-        <div className='w-3/6'>
+        <div className='w-3/6 hidden sm:block'>
           <SearchBox bgColor='bg-white' border='border-transparent' />
         </div>
 

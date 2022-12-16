@@ -12,22 +12,22 @@ const WishListItem = ({ product }: { product: CartItemInterface }) => {
     dispatch,
   } = useProducts()
   return (
-    <div className='flex gap-5 justify-start items-center my-9 '>
-      <div className='w-44'>
+    <div className='flex gap-5 justify-start items-center  border-2 border-gray-300 rounded-lg p-3'>
+      <div className='sm:w-44 w-30'>
         <img
           src={image}
           alt=''
-          className='w-44 h-52 rounded-lg object-contain'
+          className='sm:w-44 w-32 h-32 sm:h-52 rounded-lg object-contain'
         />
       </div>
       <div className='flex flex-col justify-start w-full px-3'>
-        <h1 className='text-xl font-extrabold mb-3 overflow-hidden text-ellipsis product-title '>
+        <h1 className='text-xl xl:text-2xl font-extrabold mb-3 overflow-hidden text-ellipsis product-title sm:text-left text-center'>
           {title}
         </h1>
 
-        <div className='flex items-center justify-between mt-6'>
-          <h1 className='text-[#F86338] font-extrabold text-3xl'>$ {price}</h1>
-          <div className='flex gap-3'>
+        <div className='flex items-center justify-between mt-6 sm:flex-row flex-col'>
+          <h1 className='text-[#F86338] font-extrabold text-4xl'>$ {price}</h1>
+          <div className='flex gap-3 sm:mt-0 mt-3'>
             <button
               className='border-2 border-[#F86338] px-3 py-2 text-[#F86338] rounded-xl hover:bg-slate-200'
               onClick={() =>
@@ -54,7 +54,7 @@ const WishListItem = ({ product }: { product: CartItemInterface }) => {
               
             }
             >
-              <span className="text-lg font-extrabold">
+              <span className="text-lg font-extrabold hidden sm:block">
               Add to Cart
               </span>
                <img src={Cart} alt='Add to cart' />

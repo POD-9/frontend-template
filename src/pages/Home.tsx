@@ -49,7 +49,7 @@ const Home = () => {
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
       />
 
-      <div className='flex p-28 gap-5'>
+      <div className='flex 2xl:p-28 md:p-10 p-8 gap-5 md:flex-row flex-col'>
         <Filters categories={categories} />
         <ProductGrid products={transrformProducts()} />
       </div>

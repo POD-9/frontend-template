@@ -1,50 +1,30 @@
-import { CartItemInterface } from "../common/types"
-import { useProducts } from "../context/ProductsContext"
+import { CartItemInterface } from '../common/types'
+import { useProducts } from '../context/ProductsContext'
 
 // import images
 import EmptyWish from '../../public/images/EmptyWish.svg'
-import WishListItem from "../components/WishListItem"
+import WishListItem from '../components/WishListItem'
 const WishList = () => {
   const {
     state: { wishlist },
   } = useProducts()
   console.log(wishlist)
-  return (
-    (wishlist.length > 0) ?  (
-      <div className='p-10'>
-              <h1 className='text-5xl font-extrabold my-9'>My Wish List</h1>
-          <div className='flex gap-4'>
-            <div className='w-1/2'>
-              {wishlist.map((product: CartItemInterface, i) => (
-                <WishListItem key={i} product={product} />
-              ))}
-            </div>
-            {/* <div className='w-1/2 flex flex-col pl-10'>
-              <h2 className='text-2xl font-extrabold my-4'>Cart Totals</h2>
-              <div className='flex items-center gap-8 my-5'>
-                <h3 className='font-extrabold '>Subtotal</h3>
-                <span className='font-bold'>${subtotal}</span>
-              </div>
-              <div className='flex items-center gap-8 my-5'>
-                <h3 className='font-extrabold '>Shipping</h3>
-                <span className='font-bold'>$20</span>
-              </div>
-              <div className='flex items-center gap-14 my-5'>
-                <h3 className='font-extrabold '>Total</h3>
-                <h3 className='font-extrabold '>${(subtotal + 20).toFixed(2)}</h3>
-              </div>
-              <button className="rounded bg-[#F86338] text-white p-5 max-w-[500px] w-full hover:bg-white hover:text-[#F86338] border-2 
-              font-extrabold
-              border-transparent hover:border-[#F86338]">Checkout</button>
-            </div> */}
-          </div>
+  return wishlist.length > 0 ? (
+    <div className='sm:p-10 p-3'>
+      <h1 className='xl:text-5xl lg:text-4xl text-3xl font-extrabold my-9'>My Wish List</h1>
+      <div className='flex gap-4'>
+        <div className='w-full grid grid-flow-row lg:grid-cols-2 gap-3 '>
+          {wishlist.map((product: CartItemInterface, i) => (
+            <WishListItem key={i} product={product} />
+          ))}
         </div>
-    ) : (          <div className="w-full flex justify-center items-center gap-10">
-            <h1 className="text-5xl font-extrabold">Your Wish List is Empty</h1>
-            <img className="max-h-[500px] py-5" src={EmptyWish} alt="" />
-
-          </div>)
-    
+      </div>
+    </div>
+  ) : (
+    <div className='w-full flex sm:justify-center sm:items-center sm:flex-row flex-col-reverse gap-10 py-10'>
+      <h1 className='xl:text-5xl lg:text-4xl text-3xl font-extrabold text-center'>Your Wish List is Empty</h1>
+      <img className='xl:max-h-[500px] lg:max-h-[400px] max-h-[300px] py-5' src={EmptyWish} alt='' />
+    </div>
   )
 }
 

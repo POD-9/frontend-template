@@ -16,7 +16,7 @@ const Filters = ({ categories }: { categories: string[] }) => {
   } = useProducts()
 
   return (
-    <div className='w-80 px-5'>
+    <div className='2xl:w-1/3 lg:w-2/5 2xl:px-5 md:w-1/2 w-full'>
       <SearchBox
         bgColor='bg-transparent'
         border='border-zinc-500 focus:shadow focus:shadow-orange-100'
@@ -49,7 +49,7 @@ const Filters = ({ categories }: { categories: string[] }) => {
           </label>
         </div>
 
-        <h1 className='text-2xl font-extrabold mt-6 mb-3'>
+        <h1 className='text-2xl md:text-xl font-extrabold mt-6 mb-3'>
           Product Categories
         </h1>
         {/* {Caterogry of prodcuts listing} */}
@@ -63,7 +63,7 @@ const Filters = ({ categories }: { categories: string[] }) => {
                 payload: category
               })}
             >
-              <h4 className='font-extrabold capitalize text-lg'>{category}</h4>
+              <h4 className='font-extrabold capitalize text-lg text-base'>{category}</h4>
               <img src={Chevron} alt='Chveron right' />
             </button>
           )

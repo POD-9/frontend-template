@@ -19,7 +19,7 @@ const ProductCard = (props: ProductItemInterface) => {
   // destructure product
   const { image, rating, category, title, price, id } = props
   return (
-    <div className='h-96 bg-white w-96 rounded-md group cursor-pointer p-4 relative'>
+    <div className='h-96 bg-white w-full rounded-md group cursor-pointer p-4 relative shadow-xl'>
       {
         wishlist.some((product) => product.id === id) ? (
           <button className="p-1 bg-[#FFDDD3] absolute top-3 right-3 rounded hover:bg-[#ffeeef]" onClick={() =>

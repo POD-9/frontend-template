@@ -43,7 +43,7 @@ const ProductGrid = ({ products }: ProductGridInterface) => {
       (currentProducts.length > 0) ? (
         <div>
 
-        <div className='grid grid-flow-row grid-cols-3 gap-3'>
+        <div className='grid grid-flow-row lg:grid-cols-2 2xl:grid-cols-3 gap-3 gap-cols-1'>
         {currentProducts.map((product: ProductItemInterface) => {
           return (
   

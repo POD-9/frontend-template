@@ -51,27 +51,27 @@ const ProductDetail = () => {
     <>
       {Object.keys(product).length > 0 ? (
         <div className='p-10 relative z-10 '>
-          <h1 className='text-2xl font-extrabold capitalize my-5'>
+          <h1 className='text-2xl font-extrabold capitalize md:my-5 my-2'>
             {category}
           </h1>
 
-          <div className='flex w-full-justify-between items-center'>
+          <div className='flex w-full md:justify-between md:flex-row flex-col  items-center'>
             <div className='w-3/6'>
               <img
-                className='max-h-[550px] object-contain'
+                className='xl:max-h-[550px] lg:max-h-[450px] md:max-h-[400px] max-h-[350px] m-auto object-contain'
                 src={image}
                 alt={title}
               />
             </div>
-            <div className='flex flex-col  w-3/6'>
-              <h1 className='font-extrabold overflow-hidden text-ellipsis product-title text-6xl'>
+            <div className='flex flex-col w-full md:w-3/6 mt-5 md:mt-0'>
+              <h1 className='font-extrabold overflow-hidden text-ellipsis text-3xl xl:text-5xl 2xl:text-6xl  lg:text-4xl'>
                 {title}
               </h1>
               <div className='my-5'>
-                <Rating rate={rating.rate} count={rating.count} size='h-7 ' />
+                <Rating rate={rating.rate} count={rating.count} size='lg:h-7 h-6' />
               </div>
 
-              <h1 className='text-left text-[#F3692E] font-extrabold text-6xl my-5'>
+              <h1 className='text-left text-[#F3692E] font-extrabold text-4xl lg:text-6xl my-5'>
                 ${price}
               </h1>
 
@@ -116,7 +116,7 @@ const ProductDetail = () => {
                 <h4 className='font-extrabold'>${(qty * price).toFixed(2)}</h4>
               </div>
 
-              <div className='flex items-center gap-5 mt-5'>
+              <div className='flex items-center sm:gap-5 sm:flex-row flex-col mt-5'>
                 {wishlist.some((product) => product.id === id) ? (
                   <button
                     className='rounded border-[#F86338] text-[#F86338] py-3 px-5 border-2 flex gap-2 items-center hover:bg-zinc-200'
@@ -148,7 +148,7 @@ const ProductDetail = () => {
                 {cart.some((product) => product.id === id) ? (
                   <button
                     className='rounded border-transparent text-white py-3 px-5 border-2 flex gap-2 
-                    bg-[#F86338] items-center hover:bg-[#f74c1d]'
+                    bg-[#F86338] items-center hover:bg-[#f74c1d] mt-3 sm:mt-0'
                     onClick={() =>
                       dispatch({
                         type: 'REMOVE_FROM_CART',
@@ -162,7 +162,7 @@ const ProductDetail = () => {
                 ) : (
                   <button
                     className='rounded border-transparent text-white py-3 px-5 border-2 flex gap-2 
-                    bg-[#F86338] items-center hover:bg-[#f74c1d]'
+                    bg-[#F86338] items-center hover:bg-[#f74c1d] mt-3 sm:mt-0'
                     onClick={() =>
                       dispatch({
                         type: 'ADD_TO_CART',
