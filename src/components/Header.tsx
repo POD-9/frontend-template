@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
 import SearchBox from './SearchBox'
 
+import { useProducts } from '../context/ProductsContext'
+import { useGeoLocation } from '../context/Hooks'
+
 // importing icons
 import BrandLogo from '../../public/images/Dealerz.svg'
 import Phone from '../../public/images/Phone.svg'
@@ -9,40 +12,62 @@ import Heart from '../../public/images/Heart.svg'
 import Cart from '../../public/images/Cart.svg'
 import User from '../../public/images/User.svg'
 import Bell from '../../public/images/Bell.svg'
-import { useProducts } from '../context/ProductsContext'
+import Location from '../../public/images/Location.svg'
 
 const Header = () => {
   // Getting global context
   const {
     state: { cart, wishlist },
   } = useProducts()
+
+  // Get geolocation data
+  const { locationData } = useGeoLocation()
+
   return (
     <header>
-      <div className='bg-white flex w-full justify-between md:px-10 px-5 md:24 sm:h-20 h-16 items-center'>
+      <div className='bg-white flex w-full justify-between lg:px-10 md:px-5 px-2 md:24 sm:h-20 h-16 items-center'>
         <Link to={'/'}>
           <img src={BrandLogo} alt='Dealerz' className='max-h-12' />
         </Link>
-        <div className='flex'>
+        <div className='flex '>
+          {locationData && (
+            <div className='flex items-center justify-center cursor-pointer mr-5 min-w-fit'>
+              <img className='h-6 w-6' src={Location} alt='phone' />
+              <span className='ml-1 font-bold flex gap-1'>
+                {locationData?.city},
+                <span className='hidden sm:block'>
+                  {locationData?.country_name}
+                </span>
+                <span className='sm:hidden block'>{locationData?.country_code}</span>
+              </span>
+            </div>
+          )}
           <Link to={'/notdone'}>
             <div className='flex items-center justify-center cursor-pointer'>
               <img src={Phone} alt='phone' />
-              <span className='ml-1 font-bold hidden sm:block'>Call Center</span>
+              <span className='ml-1 font-bold hidden md:block'>
+                Call Center
+              </span>
             </div>
           </Link>
           <Link to={'/notdone'}>
             <div className='flex items-center justify-center ml-6 cursor-pointer'>
               <img src={Truck} alt='shipping and returns' />
-              <span className='ml-2 font-bold hidden sm:block'>Shipping & Returns</span>
+              <span className='ml-2 font-bold hidden md:block'>
+                Shipping & Returns
+              </span>
             </div>
           </Link>
         </div>
       </div>
-      <div className='flex sm:flex-row justify-around
-       flex-row w-full items-center md:px-10 px-2 md:24 h-20  sm:justify-between focus:outline-none gap-5 sm:flex-nowrap flex-wrap'>
+      <div
+        className='flex sm:flex-row justify-around
+       flex-row w-full items-center md:px-10 px-2 md:24 h-20  sm:justify-between focus:outline-none gap-5 sm:flex-nowrap flex-wrap'
+      >
         <ul className='flex sm:gap-3 gap-5'>
-        <Link to={'/'}>
-          <li className='cursor-pointer font-extrabold'>Shop</li>
-        </Link>
+          <Link to={'/'}>
+            <li className='cursor-pointer font-extrabold'>Shop</li>
+          </Link>
           <Link to={'/notdone'}>
             <li className='cursor-pointer font-extrabold'>Promo</li>
           </Link>
@@ -70,7 +95,6 @@ const Header = () => {
             </span>
           </Link>
           <Link to={'/cart'}>
-
             <span className='relative '>
               <img className='cursor-pointer h-6' src={Cart} alt='Cart' />
               {cart.length > 0 && (
