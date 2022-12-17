@@ -4,6 +4,7 @@ import Banner from '../components/Banner'
 import Filters from '../components/Filters'
 import ProductGrid from '../components/ProductGrid'
 import { useProducts } from '../context/ProductsContext'
+import Loading from '../components/Loading'
 
 const Home = () => {
   // Destructure products from global state
@@ -43,16 +44,24 @@ const Home = () => {
 
   return (
     <>
+  {
+    (products.length > 0) ? (
+      <>
       <Banner
         header='Home Shopping, Your Choice!'
         subHeader='Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
       />
-
       <div className='flex 2xl:p-28 md:p-10 sm:p-8 p-6 gap-5 md:flex-row flex-col'>
         <Filters categories={categories} />
         <ProductGrid products={transrformProducts()} />
       </div>
+      </>
+    ) : (
+        <Loading />
+    )
+  }
+
     </>
   )
 }
