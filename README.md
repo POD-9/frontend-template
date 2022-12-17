@@ -11,6 +11,7 @@
 - Add Cart functionality
 - Add wishlist fucntionality
 - Search functionality
+- Filter products based on catagory & price
 - Pagination
 - Persistant State
 - Geolocation of User
