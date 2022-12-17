@@ -65,11 +65,11 @@ const ProductCard = (props: ProductItemInterface) => {
             $ {price}
           </h1>
         </div>
-      </Link>
       <span className='flex gap-2 items-center absolute bottom-3 right-3 p-1 border border-[#F3692E] rounded-lg'>
         <span className='font-extrabold'>View item </span>
         <img src={ChevronOrange} alt='view item' />
       </span>
+      </Link>
     </div>
   )
 }
