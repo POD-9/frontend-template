@@ -21,7 +21,7 @@ const WishList = () => {
       </div>
     </div>
   ) : (
-    <div className='w-full flex sm:justify-center sm:items-center sm:flex-row flex-col-reverse gap-10 py-10'>
+    <div className='w-full flex sm:justify-center sm:items-center sm:flex-row flex-col-reverse gap-10 py-10 bg-white'>
       <h1 className='xl:text-5xl lg:text-4xl text-2xl font-extrabold text-center'>Your Wish List is Empty</h1>
       <img className='xl:max-h-[500px] lg:max-h-[400px] max-h-[300px] py-5' src={EmptyWish} alt='' />
     </div>

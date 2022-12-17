@@ -1,4 +1,23 @@
-import { CartItemInterface } from '../common/types'
+import { CartItemInterface, GlobalStateInterface } from '../common/types'
+
+// initializer function for retreving from localstorage if data is present
+
+// const initialState = {
+//   products: products,
+//   cart: [],
+//   wishlist:[]
+// }
+
+export const globalInitializer = (initialValue:GlobalStateInterface) => {
+  const cartItems:CartItemInterface[] = JSON.parse(localStorage.getItem('cartItems') || '{}')
+  const wishItems: CartItemInterface[] = JSON.parse(localStorage.getItem('wishItems') || '{}')
+
+  return {
+    products: initialValue.products,
+    cart: cartItems || initialValue.cart,
+    wishlist: wishItems || initialValue.wishlist
+  }
+}
 
 export const productReducer = (state: any, action: any) => {
   switch (action.type) {

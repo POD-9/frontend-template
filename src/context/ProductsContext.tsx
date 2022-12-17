@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useReducer, useState } from 'react'
 import { GlobalStateInterface, ProductItemInterface, ProductProviderProps, ShoppingContextInterface } from '../common/types';
 // import reducer
-import { filterReducer, productReducer } from './Reducer';
+import { filterReducer, globalInitializer, productReducer } from './Reducer';
 
 // create a context for all products
 const ProductContext = createContext({} as ShoppingContextInterface);
@@ -35,7 +35,14 @@ const ProductProvider = ({children} : ProductProviderProps) => {
     products: products,
     cart: [],
     wishlist:[]
-  })
+  }, globalInitializer)
+
+  // Use effect to track and save cart and wishlist data to local storage
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(state.cart))
+    localStorage.setItem('wishItems', JSON.stringify(state.wishlist))
+  }, [state.cart, state.wishlist])
+  
 
 
   // Reducer to filter by parameters
