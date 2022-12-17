@@ -18,7 +18,7 @@ export interface ShoppingContextInterface  {
 
 export interface GlobalStateInterface {
   products:ProductItemInterface[], 
-  cart: CartItemInterface[],
+  cart: CartItemInterface[] ,
   wishlist: CartItemInterface[]
 }
 

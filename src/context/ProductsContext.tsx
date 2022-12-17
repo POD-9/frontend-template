@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useReducer, useState } from 'react'
-import { GlobalStateInterface, ProductItemInterface, ProductProviderProps, ShoppingContextInterface } from '../common/types';
+import { CartItemInterface, GlobalStateInterface, ProductItemInterface, ProductProviderProps, ShoppingContextInterface } from '../common/types';
 // import reducer
 import { filterReducer, globalInitializer, productReducer } from './Reducer';
 
@@ -33,8 +33,8 @@ const ProductProvider = ({children} : ProductProviderProps) => {
   // Create a reducer and intialise with empty cart and list of all the products
   const [state, dispatch] = useReducer(productReducer, {
     products: products,
-    cart: [],
-    wishlist:[]
+    cart: new Array<CartItemInterface>(),
+    wishlist:new Array<CartItemInterface>()
   }, globalInitializer)
 
   // Use effect to track and save cart and wishlist data to local storage

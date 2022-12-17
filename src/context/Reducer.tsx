@@ -9,8 +9,8 @@ import { CartItemInterface, GlobalStateInterface } from '../common/types'
 // }
 
 export const globalInitializer = (initialValue:GlobalStateInterface) => {
-  const cartItems:CartItemInterface[] = JSON.parse(localStorage.getItem('cartItems') || '{}')
-  const wishItems: CartItemInterface[] = JSON.parse(localStorage.getItem('wishItems') || '{}')
+  const cartItems:CartItemInterface[] = JSON.parse(localStorage.getItem('cartItems') || '[]')
+  const wishItems: CartItemInterface[] = JSON.parse(localStorage.getItem('wishItems') || '[]')
 
   return {
     products: initialValue.products,
