@@ -31,7 +31,7 @@ const Header = () => {
         </Link>
         <div className='flex '>
           {locationData && (
-            <div className='flex items-center justify-center cursor-pointer mr-5 min-w-fit'>
+            <div className='flex items-center justify-center  mr-5 min-w-fit'>
               <img className='h-6 w-6' src={Location} alt='phone' />
               <span className='ml-1 font-bold flex gap-1'>
                 {locationData?.city},

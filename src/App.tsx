@@ -8,7 +8,6 @@ import ProductDetail from './pages/ProductDetail';
 // import components
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Shop from './pages/Shop';
 import WishList from './pages/WishList';
 import Cart from './pages/Cart';
 import UnderWorks from './pages/UnderWorks';
@@ -20,7 +19,6 @@ function App() {
         <Header />
         <Routes>
           <Route  path="/"  element={<Home />}/>
-          <Route path="/shop" element={<Shop />}/>
           <Route  path="/products/:productid" element={<ProductDetail />}/>
           <Route path="/wishlist" element={<WishList/>}/>
           <Route path="/cart" element={<Cart />}/>
