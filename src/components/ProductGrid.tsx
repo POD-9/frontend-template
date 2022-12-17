@@ -38,7 +38,7 @@ const ProductGrid = ({ products }: ProductGridInterface) => {
 
   return (
     <div className='flex w-full flex-col'> 
-    <h1 className='text-3xl capitalize mb-5 font-bold'>{filterState.byCategory || 'All Catagories'}</h1>
+    <h1 className='md:text-2xl text-xl text-center capitalize mb-5 font-extrabold'>{filterState.byCategory || 'All Catagories'}</h1>
     {
       (currentProducts.length > 0) ? (
         <div>

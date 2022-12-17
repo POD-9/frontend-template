@@ -18,7 +18,7 @@ const Header = () => {
   } = useProducts()
   return (
     <header>
-      <div className='bg-white flex w-full justify-between md:px-10 px-5 h-24 items-center'>
+      <div className='bg-white flex w-full justify-between md:px-10 px-5 md:24 sm:h-20 h-16 items-center'>
         <Link to={'/'}>
           <img src={BrandLogo} alt='Dealerz' className='max-h-12' />
         </Link>
@@ -37,19 +37,20 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <div className='flex sm:flex-row justify-center flex-col w-full items-center md:px-10 px-5 h-24 sm:justify-between focus:outline-none gap-5'>
-        <ul className='flex gap-3'>
+      <div className='flex sm:flex-row justify-around
+       flex-row w-full items-center md:px-10 px-2 md:24 h-20  sm:justify-between focus:outline-none gap-5 sm:flex-nowrap flex-wrap'>
+        <ul className='flex sm:gap-3 gap-5'>
         <Link to={'/'}>
-          <li className='cursor-pointer font-bold'>Shop</li>
+          <li className='cursor-pointer font-extrabold'>Shop</li>
         </Link>
           <Link to={'/notdone'}>
-            <li className='cursor-pointer font-bold'>Promo</li>
+            <li className='cursor-pointer font-extrabold'>Promo</li>
           </Link>
           <Link to={'/notdone'}>
-            <li className='cursor-pointer font-bold'>About</li>
+            <li className='cursor-pointer font-extrabold'>About</li>
           </Link>
           <Link to={'/notdone'}>
-            <li className='cursor-pointer font-bold'>Blog</li>
+            <li className='cursor-pointer font-extrabold'>Blog</li>
           </Link>
         </ul>
 
@@ -57,10 +58,10 @@ const Header = () => {
           <SearchBox bgColor='bg-white' border='border-transparent' />
         </div>
 
-        <div className='flex gap-4'>
+        <div className='flex sm:gap-4 gap-5'>
           <Link to={'/wishlist'}>
-            <span className='relative'>
-              <img className='cursor-pointer h-8' src={Heart} alt='wishlist' />
+            <span className='relative '>
+              <img className='cursor-pointer h-6' src={Heart} alt='wishlist' />
               {wishlist.length > 0 && (
                 <span className='absolute bg-[#F86338] text-white rounded-full py-1 px-2 text-xs flex items-center justify-center top-[-15px] right-[-5px] font-bold w-5 h-5'>
                   {wishlist.length}
@@ -70,8 +71,8 @@ const Header = () => {
           </Link>
           <Link to={'/cart'}>
 
-            <span className='relative'>
-              <img className='cursor-pointer h-8' src={Cart} alt='Cart' />
+            <span className='relative '>
+              <img className='cursor-pointer h-6' src={Cart} alt='Cart' />
               {cart.length > 0 && (
                 <span className='absolute bg-[#F86338] text-white rounded-full py-1 px-2 text-xs flex items-center justify-center top-[-15px] right-[-5px] font-bold w-5 h-5'>
                   {cart.length}
@@ -81,10 +82,10 @@ const Header = () => {
           </Link>
 
           <Link to={'/notdone'}>
-            <img className='cursor-pointer h-8' src={User} alt='User' />
+            <img className='cursor-pointer h-6' src={User} alt='User' />
           </Link>
           <Link to={'/notdone'}>
-            <img className='cursor-pointer h-8' src={Bell} alt='Notification' />
+            <img className='cursor-pointer h-6' src={Bell} alt='Notification' />
           </Link>
         </div>
       </div>

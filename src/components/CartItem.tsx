@@ -35,7 +35,7 @@ const CartItem = ({ product }: { product: CartItemInterface }) => {
   }, [qty])
   
   return (
-    <div className='flex sm:gap-5 gap-2 justify-start items-center mb-8 lg:max-w-[750px] sm:max-w-[650px] border-2 border-gray-300 rounded-lg p-3'>
+    <div className='flex sm:gap-5 gap-2 justify-start items-center md:mb-8 mb-2 lg:max-w-[750px] sm:max-w-[650px] border-2 border-gray-300 rounded-lg p-3'>
       <div className='w-52'>
         <img
           src={image}
@@ -43,7 +43,7 @@ const CartItem = ({ product }: { product: CartItemInterface }) => {
           className='sm:w-44 w-32 h-32 sm:h-52 rounded-lg object-contain'
         />
       </div>
-      <div className='flex flex-col justify-start w-full'>
+      <div className='flex flex-col justify-end w-full'>
         <h1 className='text-xl xl:text-2xl font-extrabold mb-3 overflow-hidden text-ellipsis product-title text-left'>
           {title}
         </h1>
@@ -77,7 +77,7 @@ const CartItem = ({ product }: { product: CartItemInterface }) => {
           </div>
         </div>
         <div className='flex lg:items-center justify-between mt-6 lg:flex-row flex-col items-start'>
-          <h1 className='text-[#F86338] font-extrabold text-4xl'>$ {price}</h1>
+          <h1 className='text-[#F86338] font-extrabold xl:text-4xl lg:text-3xl sm:text-2xl text-xl'>$ {price}</h1>
           <div className='flex gap-3 lg:mt-0 mt-3'>
             <button
               className='border-2 border-[#F86338] px-3 py-2 text-[#F86338] rounded-xl hover:bg-slate-200'

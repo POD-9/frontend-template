@@ -25,8 +25,8 @@ const WishListItem = ({ product }: { product: CartItemInterface }) => {
           {title}
         </h1>
 
-        <div className='flex items-center justify-between mt-6 sm:flex-row flex-col'>
-          <h1 className='text-[#F86338] font-extrabold text-4xl'>$ {price}</h1>
+        <div className='flex items-center justify-between md:mt-6 sm:mt-4 mt-1 sm:flex-row flex-col'>
+          <h1 className='text-[#F86338] font-extrabold xl:text-4xl lg:text-3xl sm:text-2xl text-xl'>$ {price}</h1>
           <div className='flex gap-3 sm:mt-0 mt-3'>
             <button
               className='border-2 border-[#F86338] px-3 py-2 text-[#F86338] rounded-xl hover:bg-slate-200'
@@ -39,7 +39,7 @@ const WishListItem = ({ product }: { product: CartItemInterface }) => {
             >
               <img src={Trash} alt='remove' />
             </button>
-            <button className='border-2 border-black rounded-xl px-3 py-2 text-black flex gap-1 hover:bg-slate-200 items-center'
+            <button className='border-2 border-black rounded-xl sm:px-3 px-2 sm:py-2 py-1 text-black flex gap-1 hover:bg-slate-200 items-center'
             onClick={() => {
               dispatch({
                 type: 'ADD_TO_CART',

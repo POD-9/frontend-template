@@ -34,6 +34,13 @@ a {
   -webkit-box-orient: vertical;
 }
 
+.product-title-full {
+  display: -webkit-box;
+  -webkit-line-clamp: 0;
+  line-clamp: 0;
+  -webkit-box-orient: vertical;
+}
+
 .dual-bg {
   z-index: -1;
 }

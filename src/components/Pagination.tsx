@@ -9,7 +9,7 @@ const Pagination = ({ productsPerPage, totalProducts, paginate, currentPage }: {
     
     <div className="flex w-full mt-6 items-center gap-4">
       {pageNumbers.map((number) => (
-        <button className={`font-extrabold text-xl px-2 border border-[#F86338] rounded-lg cursor-pointer text-[#F86338] hover:bg-[#F86338] hover:text-white active:bg-[#F86338] ${number==currentPage ? 'bg-[#F86338] text-white':null}`} key={number} onClick={() => paginate(number)}>
+        <button className={`font-extrabold sm:text-xl sm:w-9 sm:h-9 px-2 border-2 border-[#F86338] rounded-lg cursor-pointer text-[#F86338] hover:bg-[#F86338] hover:text-white active:bg-[#F86338] ${number==currentPage ? 'bg-[#F86338] text-white':null}`} key={number} onClick={() => paginate(number)}>
           
             {number}
           
