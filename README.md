@@ -22,7 +22,7 @@
 https://www.figma.com/file/1k5LY1hla3D6PQVPlc0EPp/Shopping-Web-Template?node-id=1615%3A3731&t=EhnGbmIuDuZvlxAL-0
 
 ## Project is hosted on vercel, link is below.
-https://tech-unicorn-shopping.vercel.app/cart
+https://tech-unicorn-shopping.vercel.app/
 
 
 
