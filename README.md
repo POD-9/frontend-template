@@ -20,7 +20,7 @@
  **This project is a cryptocurrency statistics tracker which gives the details such as**
  - View All Products
  - Add the product to cart/ wishlist
- - Backend API by RapidAPIs [Fake Store API](https://fakestoreapi.com)
+ - Backend API by [Fake Store API](https://fakestoreapi.com)
 	
 ## Technologies
 Project is created with:
