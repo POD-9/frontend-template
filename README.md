@@ -1,8 +1,6 @@
 
 # Shopping App
 
-## Live Demo
-
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
