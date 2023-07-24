@@ -5,8 +5,8 @@ import Rating from './Rating'
 import { useProducts } from '../context/ProductsContext'
 
 // import images
-import HeartRed from '../../public/images/HeartRed.svg'
-import ChevronOrange from '../../public/images/ChevronOrange.svg'
+import HeartRed from '/images/HeartRed.svg'
+import ChevronOrange from '/images/ChevronOrange.svg'
 
 const ProductCard = (props: ProductItemInterface) => {
   // Getting global context
