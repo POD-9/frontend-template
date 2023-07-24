@@ -2,8 +2,8 @@ import { CartItemInterface } from "../common/types"
 import { useProducts } from "../context/ProductsContext"
 
 // images import
-import Trash from '../../public/images/Trash.svg'
-import Cart from '../../public/images/Cart.svg'
+import Trash from '/images/Trash.svg'
+import Cart from '/images/Cart.svg'
 const WishListItem = ({ product }: { product: CartItemInterface }) => {
   const { image, price, title, quantity, id } = product
 

@@ -1,5 +1,5 @@
 // importing icons
-import BrandLogo from 'images/BrandLogo.jpeg'
+import BrandLogo from '/images/BrandLogo.jpeg'
 
 const Footer = () => {
   return (

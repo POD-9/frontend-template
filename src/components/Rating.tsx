@@ -1,5 +1,5 @@
-import Star from '../../public/images/Star.svg'
-import StarOutline from '../../public/images/Star-Outline.svg'
+import Star from '/images/Star.svg'
+import StarOutline from '/images/Star-Outline.svg'
 import { RatingInterface } from '../common/types'
 
 const Rating = (props: RatingInterface ) => {

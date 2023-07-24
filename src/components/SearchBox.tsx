@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Search from '../../public/images/Search.svg'
+import Search from '/images/Search.svg'
 import { useProducts } from "../context/ProductsContext"
 
 

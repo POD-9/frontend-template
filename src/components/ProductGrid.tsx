@@ -6,7 +6,7 @@ import {
 import ProductCard from './ProductCard'
 
 // import images
-import Empty from '../../public/images/Empty.svg'
+import Empty from '/images/Empty.svg'
 import { useProducts } from '../context/ProductsContext'
 import { useEffect, useState } from 'react'
 import Pagination from './Pagination'

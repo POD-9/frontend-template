@@ -3,8 +3,8 @@ import { useProducts } from '../context/ProductsContext'
 import { useEffect, useState } from 'react'
 
 // images import
-import Trash from '../../public/images/Trash.svg'
-import HeartOrange from '../../public/images/HeartOrange.svg'
+import Trash from '/images/Trash.svg'
+import HeartOrange from '/images/HeartOrange.svg'
 
 
 

@@ -2,7 +2,7 @@ import { CartItemInterface } from '../common/types'
 import { useProducts } from '../context/ProductsContext'
 
 // import images
-import EmptyWish from '../../public/images/EmptyWish.svg'
+import EmptyWish from '/images/EmptyWish.svg'
 import WishListItem from '../components/WishListItem'
 const WishList = () => {
   const {

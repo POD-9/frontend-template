@@ -1,5 +1,5 @@
 import React from 'react'
-import Mask from '../../public/images/Mask-Group.svg'
+import Mask from '/images/Mask-Group.svg'
 import { BannerInterface } from '../common/types'
 
 const Banner = (props: BannerInterface) => {

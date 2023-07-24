@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import SearchBox from './SearchBox'
 
 // import images
-import Filter from '../../public/images/Filter.svg'
-import Chevron from '../../public/images/Chevron.svg'
+import Filter from '/images/Filter.svg'
+import Chevron from '/images/Chevron.svg'
 import { useProducts } from '../context/ProductsContext'
 
 const Filters = ({ categories }: { categories: string[] }) => {

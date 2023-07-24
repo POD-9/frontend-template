@@ -5,14 +5,14 @@ import { useProducts } from '../context/ProductsContext'
 import { useGeoLocation } from '../context/Hooks'
 
 // importing icons
-import BrandLogo from '../../public/images/BrandLogo.jpeg'
-import Phone from '../../public/images/Phone.svg'
-import Truck from '../../public/images/Truck-Delivery.svg'
-import Heart from '../../public/images/Heart.svg'
-import Cart from '../../public/images/Cart.svg'
-import User from '../../public/images/User.svg'
-import Bell from '../../public/images/Bell.svg'
-import Location from '../../public/images/Location.svg'
+import BrandLogo from '/images/BrandLogo.jpeg'
+import Phone from '/images/Phone.svg'
+import Truck from '/images/Truck-Delivery.svg'
+import Heart from '/images/Heart.svg'
+import Cart from '/images/Cart.svg'
+import User from '/images/User.svg'
+import Bell from '/images/Bell.svg'
+import Location from '/images/Location.svg'
 
 const Header = () => {
   // Getting global context

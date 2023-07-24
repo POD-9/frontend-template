@@ -1,5 +1,5 @@
 // import images
-import Construction from '../../public/images/Construction.svg'
+import Construction from '/images/Construction.svg'
 
 const UnderWorks = () => {
   return (

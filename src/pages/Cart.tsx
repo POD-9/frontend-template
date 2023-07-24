@@ -7,7 +7,7 @@ import { useProducts } from '../context/ProductsContext'
 import { useAdder } from '../context/Hooks'
 
 // import images
-import EmptyCart from '../../public/images/EmptyCart.svg'
+import EmptyCart from '/images/EmptyCart.svg'
 
 const Cart = () => {
   const {

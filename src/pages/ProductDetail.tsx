@@ -7,8 +7,8 @@ import Rating from '../components/Rating'
 import { useProducts } from '../context/ProductsContext'
 
 // import images
-import HeartOrange from '../../public/images/HeartOrange.svg'
-import ShoppingOrange from '../../public/images/ShoppingOrange.svg'
+import HeartOrange from '/images/HeartOrange.svg'
+import ShoppingOrange from '/images/ShoppingOrange.svg'
 
 const ProductDetail = () => {
   // Take ID from route parameter
