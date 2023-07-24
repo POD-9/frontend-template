@@ -1,5 +1,5 @@
 // importing icons
-import BrandLogo from '../../public/images/Dealerz.svg'
+import BrandLogo from 'images/BrandLogo.jpeg'
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
           <img className='max-w-[200px] m-auto' src={BrandLogo}  alt="Branding" />
           <ul className='my-3'>
             <li className='font-extrabold sm:my-3 my-2 text-center sm:text-left'>Privacy Policy</li>
-            <li className='font-extrabold sm:my-3 text-center sm:text-left'>Terms and Condition</li>
+            <li className='font-extrabold sm:my-3 text-center sm:text-left'>Terms and Conditions</li>
           </ul>
           </div>
           <div className="flex gap-4 justify-center items-start my-3 sm:my-0">
@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <p className='font-extrabold text-center sm:text-left'>@2020 TanahAir Studio. All rights reserved.</p>
+          <p className='font-extrabold text-center sm:text-left'>Footer text</p>
         </div>
       </div>
     </div>

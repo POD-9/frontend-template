@@ -5,7 +5,7 @@ import { useProducts } from '../context/ProductsContext'
 import { useGeoLocation } from '../context/Hooks'
 
 // importing icons
-import BrandLogo from '../../public/images/Dealerz.svg'
+import BrandLogo from '../../public/images/BrandLogo.jpeg'
 import Phone from '../../public/images/Phone.svg'
 import Truck from '../../public/images/Truck-Delivery.svg'
 import Heart from '../../public/images/Heart.svg'
@@ -27,7 +27,7 @@ const Header = () => {
     <header>
       <div className='bg-white flex w-full justify-between lg:px-10 md:px-5 px-2 md:24 sm:h-20 h-16 items-center'>
         <Link to={'/'}>
-          <img src={BrandLogo} alt='Dealerz' className='max-h-12' />
+          <img src={BrandLogo} alt='Logo' className='max-h-12' />
         </Link>
         <div className='flex '>
           {locationData && (
