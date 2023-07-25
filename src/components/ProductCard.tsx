@@ -62,7 +62,7 @@ const ProductCard = (props: ProductItemInterface) => {
             {category}
           </h4>
           <h1 className='text-center text-[#F3692E] font-bold text-xl'>
-            $ {price}
+            £{price.toFixed(2)}
           </h1>
         </div>
       <span className='flex gap-2 items-center absolute bottom-3 right-3 p-1 border border-[#F3692E] rounded-lg'>

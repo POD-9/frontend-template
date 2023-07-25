@@ -94,7 +94,7 @@ const Header = () => {
               )}
             </span>
           </Link>
-          <Link to={'/cart'}>
+          <Link to={'/checkout'}>
             <span className='relative '>
               <img className='cursor-pointer h-6' src={Cart} alt='Cart' />
               {cart.length > 0 && (
