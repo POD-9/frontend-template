@@ -1,15 +1,7 @@
 
 # Shopping App
-**Web application to track all the data of cryptocurrencies.**
-
-## Live Demo
-[Click Here for Live Demo](https://tech-unicorn-shopping.vercel.app/)
-
-![Home Page](https://github.com/Fayaz-B/tech-unicorn-shopping/blob/main/public/home.png?raw=true)
-![Coin Details Page](https://github.com/Fayaz-B/tech-unicorn-shopping/blob/main/public/details.png?raw=true)
 
 ## Table of contents
-* [Live Demo](https://tech-unicorn-shopping.vercel.app)
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Features](#features)
@@ -17,7 +9,6 @@
 * [Setup](#setup)
 
 ## General info
- **This project is a cryptocurrency statistics tracker which gives the details such as**
  - View All Products
  - Add the product to cart/ wishlist
  - Backend API by [Fake Store API](https://fakestoreapi.com)
@@ -42,7 +33,6 @@ Project is created with:
 To run this project, install it locally using npm:
 
 ```
-$ cd ../shopping-app
 $ npm install
 $ npm run dev
 ```
