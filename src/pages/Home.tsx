@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { ProductItemInterface } from '../common/types'
 import Banner from '../components/Banner'
 import Filters from '../components/Filters'
-import ProductGrid from '../components/ProductGrid'
+import HomeCard from '../components/HomeCard'
 import { useProducts } from '../context/ProductsContext'
 import Loading from '../components/Loading'
 
