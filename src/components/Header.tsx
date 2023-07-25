@@ -66,10 +66,10 @@ const Header = () => {
       >
         <ul className='flex sm:gap-3 gap-5'>
           <Link to={'/'}>
-            <li className='cursor-pointer font-extrabold'>Shop</li>
+            <li className='cursor-pointer font-extrabold'>Home</li>
           </Link>
-          <Link to={'/notdone'}>
-            <li className='cursor-pointer font-extrabold'>Promo</li>
+          <Link to={'/products'}>
+            <li className='cursor-pointer font-extrabold'>Products</li>
           </Link>
           <Link to={'/notdone'}>
             <li className='cursor-pointer font-extrabold'>About</li>

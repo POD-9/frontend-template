@@ -4,6 +4,7 @@ import '../styles/global.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 // import pages
 import Home from './pages/Home';
+import ProductList from './pages/ProductList';
 import ProductDetail from './pages/ProductDetail';
 // import components
 import Header from './components/Header';
@@ -19,6 +20,7 @@ function App() {
         <Header />
         <Routes>
           <Route  path="/"  element={<Home />}/>
+          <Route  path="/products"  element={<ProductList />}/>
           <Route  path="/products/:productid" element={<ProductDetail />}/>
           <Route path="/wishlist" element={<WishList/>}/>
           <Route path="/cart" element={<Cart />}/>
