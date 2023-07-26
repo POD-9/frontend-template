@@ -35,12 +35,12 @@ const CartItem = ({ product }: { product: CartItemInterface }) => {
   }, [qty])
   
   return (
-    <div className='flex sm:gap-5 gap-2 justify-start items-center md:mb-8 mb-2 lg:max-w-[750px] sm:max-w-[650px] border-2 border-gray-300 rounded-lg p-3'>
+    <div className='flex sm:gap-5 gap-2 justify-start items-center md:mb-8 mb-2 border-2 border-gray-300 rounded-lg p-3'>
       <div className='w-52'>
         <img
           src={image}
           alt=''
-          className='sm:w-44 w-32 h-32 sm:h-52 rounded-lg object-contain'
+          className='sm:w-44 w-32 h-16 sm:h-52 rounded-lg object-contain'
         />
       </div>
       <div className='flex flex-col justify-end w-full'>
