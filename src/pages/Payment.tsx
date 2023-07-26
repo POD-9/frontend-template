@@ -44,7 +44,7 @@ const Payment = ({ checkoutStatus, setCheckoutStatus }: { checkoutStatus: string
             <input type="checkbox" name="same-as-delivery" id="same-as-delivery" defaultChecked onChange={() => {setChecked(!checked)} } />
             <label htmlFor="same-as-delivery">Same billing address as delivery address</label>
         </div>
-        {checked && <AddressForm onSubmit={handleBillingDetails} default={billingDetails} id={"payment-address-form"} />}
+        {!checked && <AddressForm onSubmit={handleBillingDetails} default={billingDetails} id={"payment-address-form"} />}
       </>
     )
   }
