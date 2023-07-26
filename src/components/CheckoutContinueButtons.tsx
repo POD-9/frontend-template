@@ -1,5 +1,5 @@
 
-const CheckoutContinueButtons = ({ checkoutStatus, setCheckoutStatus }) => {
+const CheckoutContinueButtons = ({ checkoutStatus, setCheckoutStatus }: { checkoutStatus: string, setCheckoutStatus: any}) => {
     return (
         <div className="grid grid-cols-2 gap-2 p-2">
         <button className={"rounded bg-white text-[#F86338] lg:p-5 p-3 w-full hover:bg-[#F86338] hover:text-white border-2 font-extrabold border-[#F86338] border-2 hover:border-transparent text-xl" +

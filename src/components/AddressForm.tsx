@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import WalletInteractionButton from './WalletInteractionButton';
 
-const DeliveryForm = (props: any) => {
+const AddressForm = (props: any) => {
     return (
         <>
   <div className="p-6 border border-gray-300 sm:rounded-md">
-    <form method="POST" id="delivery-form" onSubmit={props.onSubmit}
+  <WalletInteractionButton action={"import"} information={"address"} />
+    <form method="POST" id={props.id} onSubmit={props.onSubmit}
     >
       <label className="block mb-6">
         <span className="text-gray-700">Your name</span><span className="text-red-500">*</span>
@@ -202,10 +204,12 @@ const DeliveryForm = (props: any) => {
         ></textarea>
       </label>
     </form>
+    <WalletInteractionButton action={"share"} information={"address"} />
+
   </div>
 
         </>
     )
 };
 
-export default DeliveryForm;
+export default AddressForm;

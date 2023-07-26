@@ -31,11 +31,6 @@ const Checkout = () => {
     country: "",
     telephone: "",
     message: "",
-    paymentMethod: "",
-    cardNumber: "",
-    cardName: "",
-    cardExpiry: "",
-    cardCVV: "",
   })
 
   const handleDeliveryDetails = (e: any) => {
@@ -75,7 +70,7 @@ const Checkout = () => {
                 <Delivery onSubmit={handleDeliveryDetails} default={deliveryDetails} />
             ) : checkoutStatus === 'Payment' ? (
                 <>
-                <Payment />
+                <Payment checkoutStatus={checkoutStatus} setCheckoutStatus={setCheckoutStatus} />
                 </>
             ) : checkoutStatus === 'Confirmation' ? (
                 <></>

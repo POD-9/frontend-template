@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CheckoutHeader = ({ checkoutStatus }) => {
+const CheckoutHeader = ({ checkoutStatus }: { checkoutStatus: string }) => {
     return (
         <div className="grid grid-cols-3 gap-2">
         <div className={"rounded flex items-center justify-center border-[#F86338] text-black py-3 px-5 border-2 flex gap-2 bg-" + 
