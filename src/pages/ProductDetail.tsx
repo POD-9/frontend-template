@@ -73,7 +73,7 @@ const ProductDetail = () => {
                 </div>
 
                 <h1 className='text-left text-[#F3692E] font-extrabold text-2xl sm:text-3xl md:text-4xl lg:text-6xl sm:my-5 my-2'>
-                  ${price}
+                  £{price.toFixed(2)}
                 </h1>
 
                 <h4 className='text-2xl font-extrabold'>Product Details</h4>

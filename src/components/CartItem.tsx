@@ -35,12 +35,12 @@ const CartItem = ({ product }: { product: CartItemInterface }) => {
   }, [qty])
   
   return (
-    <div className='flex sm:gap-5 gap-2 justify-start items-center md:mb-8 mb-2 lg:max-w-[750px] sm:max-w-[650px] border-2 border-gray-300 rounded-lg p-3'>
+    <div className='flex sm:gap-5 gap-2 justify-start items-center md:mb-8 mb-2 border-2 border-gray-300 rounded-lg p-3'>
       <div className='w-52'>
         <img
           src={image}
           alt=''
-          className='sm:w-44 w-32 h-32 sm:h-52 rounded-lg object-contain'
+          className='sm:w-44 w-32 h-16 sm:h-52 rounded-lg object-contain'
         />
       </div>
       <div className='flex flex-col justify-end w-full'>
@@ -77,7 +77,7 @@ const CartItem = ({ product }: { product: CartItemInterface }) => {
           </div>
         </div>
         <div className='flex lg:items-center justify-between mt-6 lg:flex-row flex-col items-start'>
-          <h1 className='text-[#F86338] font-extrabold xl:text-4xl lg:text-3xl sm:text-2xl text-xl'>$ {price}</h1>
+          <h1 className='text-[#F86338] font-extrabold xl:text-4xl lg:text-3xl sm:text-2xl text-xl'>£{price.toFixed(2)}</h1>
           <div className='flex gap-3 lg:mt-0 mt-3'>
             <button
               className='border-2 border-[#F86338] px-3 py-2 text-[#F86338] rounded-xl hover:bg-slate-200'
@@ -89,16 +89,6 @@ const CartItem = ({ product }: { product: CartItemInterface }) => {
               }
             >
               <img src={Trash} alt='remove' />
-            </button>
-            <button className='border-2 border-[#F86338] rounded-xl px-3 py-2 text-[#F86338] flex gap-1 hover:bg-slate-200'
-            onClick={() =>
-              dispatch({
-                type: 'ADD_TO_WISHLIST',
-                payload: product,
-              })
-            }
-            >
-              Wishlist <img src={HeartOrange} alt='wishlist' />
             </button>
           </div>
         </div>
