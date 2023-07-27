@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { ProductItemInterface } from '../common/types'
 import Banner from '../components/Banner'
 import Filters from '../components/Filters'
-import LoyaltyDealCard from '../components/LoyaltyDealCard'
-import TrendingCard from '../components/TrendingCard'
-import RecommendationsCard from '../components/RecommendationsCard'
-import DiscoverNewCard from '../components/DiscoverNewCard'
+import LoyaltyDealContainer from '../components/LoyaltyDealContainer'
+import TrendingContainer from '../components/TrendingContainer'
+import RecommendationsContainer from '../components/RecommendationsContainer'
+import DiscoverNewContainer from '../components/DiscoverNewContainer'
 import { useProducts } from '../context/ProductsContext'
 import Loading from '../components/Loading'
 
@@ -52,13 +52,13 @@ const Home = () => {
         subHeader='Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
       />
-      <LoyaltyDealCard />
+      <LoyaltyDealContainer />
   {
     (products.length > 0) ? (
       <>
-      <TrendingCard />
-      <RecommendationsCard />
-      <DiscoverNewCard />
+      <TrendingContainer />
+      <RecommendationsContainer />
+      <DiscoverNewContainer />
       </>
     ) : (
         <Loading />
