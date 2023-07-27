@@ -59,7 +59,9 @@ export interface ProductItemInterface  {
 
 // Product Grid Interface
 export interface ProductGridInterface {
-  products: ProductItemInterface[]
+  products: ProductItemInterface[],
+  itemsPerPage: number,
+  pages: number
 }
 
 // rating modal

@@ -5,12 +5,12 @@ const TrendingCard = () => {
     <>
       <div className={"items-stretch flex flex-row w-full  border-white text-black py-3 px-5 border-2 flex gap-2 bg-white" + 
             " items-center  sm:mt-0"}>
-        <div className="flex justify-end lg:w-1/3 md:w-1/2 w-3/4">
+        <div className="flex justify-end w-2/3">
           <div className={"bg-[#34aeeb] lg:p-3 p-2 w-full border-2 font-extrabold border-transparent text-l"}>
             <h3 className="text-white text-xl">Trending right now</h3>
           </div>
         </div>
-        <div className="flex justify-end lg:w-1/6 md:w-1/5 w-1/4">
+        <div className="flex justify-end w-1/3">
           <button name="viewDeal" className={"bg-white border-[#f86338] text-[#f86338] lg:p-3 p-2 w-full hover:bg-[#f86338] hover:text-white border-2 font-extrabold hover:border-[#34aeeb] text-l"}>
           <Link to="/notdone"> See all → </Link>
           </button>

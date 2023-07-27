@@ -49,7 +49,7 @@ const ProductList = () => {
       <>
       <div className='flex 2xl:p-28 md:p-10 sm:p-8 p-6 gap-5 md:flex-row flex-col'>
         <Filters categories={categories} />
-        <ProductGrid products={transformProducts()} />
+        <ProductGrid products={transformProducts()} itemsPerPage={6} pages={10} />
       </div>
       </>
     ) : (

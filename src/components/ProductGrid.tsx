@@ -11,7 +11,7 @@ import { useProducts } from '../context/ProductsContext'
 import { useEffect, useState } from 'react'
 import Pagination from './Pagination'
 
-const ProductGrid = ({ products }: ProductGridInterface) => {
+const ProductGrid = ({ products }: ProductGridInterface, itemsPerPage: number, pages: number) => {
 
   // Global state to check what category filtering by
   const {filterState} = useProducts()
@@ -19,7 +19,7 @@ const ProductGrid = ({ products }: ProductGridInterface) => {
 
     // state to track pagination
     const [currentPage, setCurrentPage] = useState(1);
-    const [productsPerPage] = useState(5);
+    const [productsPerPage] = useState(itemsPerPage);
 
     // set current page back to one
     useEffect(() => {
@@ -38,7 +38,7 @@ const ProductGrid = ({ products }: ProductGridInterface) => {
 
   return (
     <div className='flex w-full flex-col'> 
-    <h1 className='md:text-2xl text-xl text-center capitalize mb-5 font-extrabold'>{filterState.byCategory || 'All Catagories'}</h1>
+    <h1 className='md:text-2xl text-xl text-center capitalize mb-5 font-extrabold'>{filterState.byCategory || ''}</h1>
     {
       (currentProducts.length > 0) ? (
         <div>
@@ -63,7 +63,7 @@ const ProductGrid = ({ products }: ProductGridInterface) => {
       </div>
               <Pagination
         productsPerPage={productsPerPage}
-        totalProducts={products.length}
+        totalProducts={Math.min(products.length, pages*productsPerPage)}
         paginate={paginate}
         currentPage={currentPage}
       />
